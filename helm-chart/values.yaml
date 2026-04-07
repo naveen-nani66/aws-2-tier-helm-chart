@@ -1,18 +1,23 @@
 frontend:
   deploymentname: frontend-deployment
   replicas: 1
-  image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:1.0.7
+  # The account ID is updated to your verified ID: 497339096730
+  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/frontend-repo:BUILD_NUMBER
   servicename: frontend-service
   type: LoadBalancer
 
 backend:
   deploymentname: backend-deployment
   replicas: 1
-  image: 657001761946.dkr.ecr.us-east-1.amazonaws.com/backend-repo:1.0.7
+  # The account ID is updated to your verified ID: 497339096730
+  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/backend-repo:BUILD_NUMBER
   servicename: backend-service
 
 db:
   secrets:
     name: db-secrets
-    username: dmlqYXk=
+    # 'Naveen' encoded in base64
+    username: dmlqYXk= 
+    # '123456789' encoded in base64. 
+    # NOTE: If you updated your RDS password to 8+ chars, update this string!
     password: UGFzc3dvcmQxMjM=
