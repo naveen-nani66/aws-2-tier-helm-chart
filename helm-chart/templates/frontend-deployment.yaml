@@ -14,9 +14,13 @@ spec:
       labels:
         app: frontend
     spec:
+      # ADD THIS SECTION BELOW
+      imagePullSecrets:
+        - name: ecr-registry-helper
       containers:
         - name: frontend
           image: {{ .Values.frontend.image }}
+          imagePullPolicy: Always  # Recommended when using :latest or frequent builds
           ports:
             - containerPort: 3000
           env:
