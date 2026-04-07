@@ -17,7 +17,7 @@ db:
   secrets:
     name: db-secrets
     # 'Naveen' encoded in base64
-    username: dmlqYXk= 
+    username: TmF2ZWVu 
     # '123456789' encoded in base64. 
     # NOTE: If you updated your RDS password to 8+ chars, update this string!
-    password: UGFzc3dvcmQxMjM=
+    password: TXlOZXdQYXNzd29yZDEyMw==
