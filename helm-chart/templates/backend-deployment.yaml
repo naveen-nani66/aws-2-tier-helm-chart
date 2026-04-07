@@ -12,9 +12,13 @@ spec:
       labels:
         app: backend
     spec:
+      # CRITICAL: This allows K8s to pull from your private ECR
+      imagePullSecrets:
+        - name: ecr-registry-helper
       containers:
         - name: backend
           image: {{ .Values.backend.image }}
+          imagePullPolicy: Always
           ports:
             - containerPort: 5000
           env:
