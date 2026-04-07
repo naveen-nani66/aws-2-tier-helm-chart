@@ -2,7 +2,7 @@ frontend:
   deploymentname: frontend-deployment
   replicas: 1
   # The account ID is updated to your verified ID: 497339096730
-  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/frontend:1.0.13
+  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/frontend:1.0.14
   servicename: frontend-service
   type: LoadBalancer
 
@@ -10,7 +10,7 @@ backend:
   deploymentname: backend-deployment
   replicas: 1
   # The account ID is updated to your verified ID: 497339096730
-  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/backend:1.0.13
+  image: 497339096730.dkr.ecr.us-east-1.amazonaws.com/backend:1.0.14
   servicename: backend-service
 
 db:
